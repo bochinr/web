@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-id选择器</title>
+  <style>
+    div {
+        width: 100px;
+        height: 90px;
+        float: left;
+        padding: 5px;
+        margin: 5px;
+        background-color: #EEEEEE;
+    }
+    </style>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>   
+    <div id="test0">
+         <p>id="test0"</p>
+         <p>选中</p>
+    </div>
+    <div id="test1">
+        <p>id="test1"</p>
+        <p>jQuery选中</p>
+    </div>
+    <div id="test1"> 
+        <p>id="test1"</p>
+        <p>jQuery未选中</p>
+    </div>
+</body>
+</html>
+<script type="text/JavaScript">
+    //通过原生方法处理
+    var div = document.getElementById('test0');
+    div.style.border = "3px solid blue";
+</script>
+<script type="text/JavaScript">
+    //通过jQuery直接传入id
+    $("#test1").css("border", "3px solid red");
+</script>

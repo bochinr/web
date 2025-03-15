@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-div高度自适应</title>
+  <style type="text/css">
+    *{
+        padding:0;
+        margin:0;
+    }
+    .header{
+        height:100px;
+        line-height:100px;
+        background:#abcdef;
+    }
+    .content{
+        margin-top:10px;
+        overflow:hidden;
+    }
+    .content .left{
+        width:20%;
+        height:100%;
+        background:#abcdef;
+        float:left;
+
+    }
+    .content .right{
+        width:80%;
+        height:100%;
+        background:#fff000;
+        float:right;
+    }
+
+  </style>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    function setHeight(){
+		//  $(window).height() 表示窗口可视区域高度
+        var winh=$(window).height();
+        $(".left").css("height",winh-110+"px");
+    }
+    $(function(){ 
+        setHeight();
+    })
+</script>
+</head>
+<body>
+    <div class="header">Header</div>
+    <div class="content">
+        <div class="left">Left</div>
+        <div class="right">Right</div>
+    </div>
+</body>
+</html>

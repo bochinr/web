@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS兄弟选择器</title>
+    </head>
+    <style type="text/css">
+        h2~p {
+            color: red;
+        }
+    </style>
+    <body>
+        <h1>一级标题</h1>
+        <p>这里不会变色</p>
+        <h2>二级标题</h2>
+        <p>这里会变色</p>
+        <h3>三级标题</h3>
+        <p>这里也会变色</p>
+        <div>
+            <p>这里在div内部，与h2元素不是同一个父元素，不会变色</p>
+        </div>
+    </body>
+</html>

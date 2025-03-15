@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>标签样式操作-addClass()</title>
+  <style type="text/css">
+    .test{
+        font-weight:bold;
+        color:red;
+    }
+    .add{
+        background:yellow;
+        color:blue;
+    }
+  </style>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(function(){
+        $("#btn1").bind("click",function(){
+            $("p").addClass("add");
+            // $("p").removeClass("add");
+			// $("p").toggleClass("add");
+        });
+    })
+</script>
+</head>
+<body>
+    <button id="btn1">追加样式</button>
+    <p  class="test">你喜欢的运动是：</p>
+    <!-- <p  class="test add">你喜欢的运动是：</p> -->
+    <ul>
+        <li>足球</li>
+        <li>羽毛球</li>
+    </ul>
+</body>
+</html>

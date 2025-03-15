@@ -1,0 +1,15 @@
+video {
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+audio {
+    display: block;
+    width: 800px;
+    height: 450px;
+    background: url(linhaiqilv.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+}

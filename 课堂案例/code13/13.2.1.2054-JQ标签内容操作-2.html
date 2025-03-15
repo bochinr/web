@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery_注册表单验证</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+  function checkname(){
+    //对用户名进行验证
+    var username=$("[name='username']").val();
+    var re =/^[a-zA-Z_][a-zA-Z_0-9]{3,19}$/.test(username);
+    if(re){
+        $('#m_username').html('用户名合法');
+        return true;
+    }else{
+        $('#m_username').html('用户名格式错误');
+        return false;
+    }
+  }
+  //对密码进行验证
+  function checkPassword(){
+    var password=$("[name='password']").val();
+    if(/^\S{6,20}$/.test(password)){
+        $('#m_password').html('密码格式正确');
+        return true;
+    }else{
+        $('#m_password').html('密码格式错误');
+        return false;
+    }
+  }
+  //对确认密码进行验证
+  function checkRePassword(){
+    var password=$("[name='password']").val();
+    var Repassword=$("[name='Repassword']").val();
+    if(password==Repassword){
+        $('#m_repassword').html('确认密码正确');
+        return true;
+    }else{
+        $('#m_repassword').html('确认密码错误');
+        return false;
+    }
+  }
+</script>
+</head>
+
+<body>
+<form action="" method="post">
+    <table class="t1" width="100%">
+        <tr>
+            <td>
+                <h1>会员注册</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>用户名：</td>
+            <td> <input onblur="checkname()" type="text" name="username"/></td>
+            <td> <div class="message" id="m_username">请输入4到20位由应为字母、数字和下画线组成的字符串，且数字不能开头</div></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td> <input onblur="checkPassword()"type="text" name="password"/> </td>
+            <td> <div class="message" id="m_password">密码为6到20位的非空白字符</div></td>
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td> <input onblur="checkRePassword()"type="text" name= "Repassword"/> </td>
+            <td> <div class="message" id="m_repassword">确认密码和密码保持一致</div></td>
+        </tr>
+    </table>
+  <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

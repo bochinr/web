@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-插入HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("h2").before("<b>之前</b>");
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>标题1</h1>
+    <h2>标题2</h2>
+    <h3>标题3</h3>
+<button id="btn1">之前插入</button>
+</body>
+</html>

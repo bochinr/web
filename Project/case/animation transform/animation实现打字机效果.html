@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				width: 0;
+				height: 20px;
+				font-size: 20px;
+				line-height: 20px;
+				/* background-color: lightpink; */
+				animation: write 3s steps(5) forwards;
+				/* 强制文字一行显示 */
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			@keyframes write {
+				0 {
+					width: 0;
+				}
+				to {
+					width: 100px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>我永远喜欢爱莉希雅</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5的hidden</title>
+		<style type="text/css">
+			p{
+				display: none;
+			}
+		</style>
+    </head>
+    <body>
+     <button id="button" onclick="
+        var target=document.getElementById('target');
+        target.hidden=!target.hidden;
+        var button=document.getElementById('button');
+        if(target.hidden){button.innerHTML='显示'}else{button.innerHTML= '隐藏'}">
+            显示
+        </button>
+		
+		
+        <div id="target" hidden="true">
+            悄悄的我走了,正如我悄悄的来
+        </div>
+
+		<p>123465</p>
+    </body>
+</html>

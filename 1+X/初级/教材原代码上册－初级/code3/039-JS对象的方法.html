@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+var user = {};          	//声明一个对象
+user.id=1;              	//为对象添加属性
+user["name"]="张三";  	//既可以用点访问属性，也可以用字符串作为键访问属性
+user.age = 20;
+user["career"] = "学生";
+user.courses = [];    	//所选课程
+user.chooseCourse = function(courseName){   	//选课方法
+    user.courses.push(courseName)
+}
+    
+user.chooseCourse("数据结构");      				//调用选课方法
+user.chooseCourse("高等数学");
+user.chooseCourse("Java");
+
+document.write(user.name+"所选的课程是:"+user.courses);
+
+  </script>
+ </body>
+</html>

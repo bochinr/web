@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+var User = function(id,name){   	//声明一个类
+        this.id=id;                 	//this表示此类的成员
+        this.name=name;
+}
+var user1 = new User(1,"张三");   	//实例化一个对象
+document.write(user1.name);
+document.write("<br/>");
+var user2 = new User(2,"李四");
+document.write(user2.name);
+
+  </script>
+ </body>
+</html>

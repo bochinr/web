@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-事件冒泡</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+        $('#sub').click(function(event){
+            var username = $("#username").val();
+            if(username==""){
+                $('#msg').html("<p>文本框值不能为空</p>");
+                event.preventDefault();
+            }
+        }); 
+    });
+</script>
+</head>
+<body>
+<form action="test.html">
+    用户名：<input type="text" id="username" />
+    <input type="submit" value="提交" id="sub"/>
+</form>
+<div id="msg"></div>
+</body>
+</html>

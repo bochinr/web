@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+function myfun(i){
+        return function(){      	//将一个匿名函数作为返回值，函数中保存了i的值
+            return ++i;
+        }
+    }
+    var fun1 = myfun(3);        	//传入3为初始值，返回含有3的函数
+    var fun2 = myfun(100);      	//传入100为初始值，返回含有100的函数
+    for(i=0;i<5;i++){
+        document.write(fun1()); 	//闭包运算从3开始累加
+        document.write('<br/>');
+    }
+    document.write("<hr/>");
+    for(i=0;i<5;i++){
+        document.write(fun2()); 	//闭包运算从100开始累加
+        document.write('<br/>');
+    }
+
+  </script>
+ </body>
+</html>

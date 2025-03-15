@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS变形</title>
+		<style type="text/css">
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%
+			}
+
+			body {
+				/* display: flex; */
+				background-color: #333;
+				color:#fff;
+			}
+
+			div {
+				display:flex; 
+				width: 368px;
+				height: 402px;
+				background-image: url(images/3d.jpg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				float: left;
+				margin: 1rem;
+				border: solid 8px;
+				border-color: red green yellow blue;
+				text-align: right;
+				font-size: 2rem;
+			}
+			div>img{
+				margin: auto;
+				max-width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div style="float: left;">
+			<img src="./images/3D立方体.png">
+		</div>
+		<div>
+			<img id="box3d" src="./images/3D立方体.png"  style="<!-- transform: rotateX(180deg); -->">
+		</div>
+		<!-- <div>
+			<img src="./images/3D立方体.png"  style="transform: rotateX(180deg);">
+		</div>
+		<div>
+			<img src="./images/3D立方体.png"  style="transform: rotateY(180deg);">
+		</div>
+		<div>
+			<img src="./images/3D立方体.png"  style="transform: rotateZ(180deg);">
+		</div>
+		<div>
+			<img src="./images/3D立方体.png"  style="transform: rotateX(60deg) rotateZ(180deg);">
+		</div>
+		<div>
+			<img src="./images/3D立方体.png"  style="transform: rotateX(60deg) rotateZ(180deg); transform-origin: center bottom;">
+		</div> -->
+		<br style="clear: both;">
+		<hr>
+		选择：
+		<label for="X">Ｘ：<input type="radio" name="XYZ" id="X" value="X" checked="checked" /></label>
+		<label for="Y">Ｙ：<input type="radio" name="XYZ" id="Y" value="Y"/></label>
+		<label for="Z">Ｚ：<input type="radio" name="XYZ" id="Z" value="Z"/></label>&nbsp;
+		<input type="number" name="num" id="num" value="0" max="360" min="-360" step="5" onchange="Rotating(this.value)"/>
+		deg
+		<input type="button" name="btnClear" id="btnClear" value="复原" onclick="location.href=location.href" />
+		<script type="text/javascript">
+			function Rotating(degValue)
+			{
+				var xyz=getRadiosValue();
+				var rotateAttrValue="rotate"+xyz+"("+degValue+"deg)";
+				document.getElementById("box3d").style.transform=rotateAttrValue;
+			}
+			function getRadiosValue(){
+			    var radio_tag = document.getElementsByName("XYZ");
+			    for(var i=0;i<radio_tag.length;i++){
+			        if(radio_tag[i].checked){
+			            var checkvalue = radio_tag[i].value;            
+			            return checkvalue;
+			        }
+			    }
+			}
+			
+		</script>
+	</body>
+</html>

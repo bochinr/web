@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5的form属性</title>
+    </head>
+    <body>
+		<form id="login" name="login" action="login.php" method="get"></form>
+		
+		<form id="register" name="register" action="register.php" method="post"></form>
+		
+		<label for="username">账号：<input id="username"  name="username" form="login register" type= "text" /></label><br />
+		
+        <label for="password">密码：<input id="password" name="password" form="login register" type="password"/> </label><br />
+		
+        <input form="login" type="submit" value="登录" />&nbsp;
+		
+		<input form="register" type="submit"  value="注册"/>
+    </body>
+</html>

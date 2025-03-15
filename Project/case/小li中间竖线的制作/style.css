@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ff50hx');
+    src: url('fonts/icomoon.eot?ff50hx#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ff50hx') format('truetype'),
+        url('fonts/icomoon.woff?ff50hx') format('woff'),
+        url('fonts/icomoon.svg?ff50hx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.center {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.center ul li {
+    float: left;
+}
+
+/* 选择偶数的小li */
+.center ul li:nth-child(even) {
+    width: 1px;
+    height: 10px;
+    background-color: #666;
+    margin: 5px 10px 0;
+}
+
+.center ul li:nth-child(odd)::after {
+    font-family: 'icomoon';
+    content: "\e901";
+    margin-left: 5px;
+}

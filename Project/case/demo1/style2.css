@@ -1,0 +1,51 @@
+/* 字体图标 */
+span {
+
+    font-family: 'icomoon';
+}
+
+/* css三角 */
+.sanjiao {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-left-color: pink;
+}
+
+/* body {
+    cursor: ;
+} */
+
+/* 单行文本溢出隐藏 */
+.ellipsisBox {
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: pink;
+}
+
+/* 边框使用之margin负值的妙用 */
+.border1 {
+
+    background-color: pink;
+}
+
+.border1 div {
+    float: left;
+    position: relative;
+    width: 199px;
+    height: 198px;
+    margin-left: -1px;
+    /* background-color: skyblue; */
+    border: 1px solid transparent;
+}
+
+.border1 .left {
+    margin-left: 0;
+}
+
+.border1 div:hover {
+    border: 1px solid red;
+    z-index: 1;
+}

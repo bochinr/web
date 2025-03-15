@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-复制HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        $("button").click(function(){
+                $("body").append($("p").clone());
+        });
+    });
+</script>
+</head>
+<body>
+<p>二月春风似剪刀</p>
+<button>复制 p 元素，然后追加到 body 元素里面的最后</button>
+</body>
+</html>

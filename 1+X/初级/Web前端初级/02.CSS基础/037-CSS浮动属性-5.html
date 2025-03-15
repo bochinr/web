@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/ html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS浮动</title>
+        <style type="text/css">
+            li.horizontal{
+                /* float可以使块级元素横排 */
+                float: left;
+                /* 修改li的样式 */
+                list-style-type: none;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>语文</li>
+            <li>数学</li>
+            <li>英语</li>
+            <li>物理</li>
+            <li>化学</li>
+            <li>生物</li>
+            <li>政治</li>
+            <li>历史</li>
+        </ul>
+
+        <ul>
+            <li class="horizontal">语文</li>
+            <li class="horizontal">数学</li>
+            <li class="horizontal">英语</li>
+            <li class="horizontal" style="clear: left;">物理</li>
+            <li class="horizontal">化学</li>
+            <li class="horizontal">生物</li>
+            <li class="horizontal">政治</li>
+            <li class="horizontal">历史</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-鼠标事件</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+    $("#p1").hover(
+        function(){
+            $("#p1").css('background','green');
+        },
+        function(){
+            $("#p1").css('background','pink');
+        }
+    )
+});
+</script>
+</head>
+<body>
+<p id="p1">这是一个段落。</p>
+</body>
+</html>

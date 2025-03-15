@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-查找HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("p").attr("id","wr");
+        });
+    });
+</script>
+</head>
+<body>
+<p title="标签<p>的属性" id="btn1">锄禾日当午</p>
+<button>显示 title 属性的值</button>
+</body>
+</html>

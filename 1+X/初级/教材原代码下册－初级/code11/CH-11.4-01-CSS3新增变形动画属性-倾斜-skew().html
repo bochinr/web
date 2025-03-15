@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS3新增变形动画属性-倾斜-skew()</title>
+        <style>
+			body{
+				background-color: #000000;
+				margin: 100px;
+			}
+            div {
+                height: 100px;
+                width: 100px;
+                border: 2px solid #0f0;
+                background-color: #00f;
+				color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="transform: skewX(30deg);transform-origin: left top; position: absolute;">
+        </div>
+		<!-- transparent属性用来指定全透明色彩 -->
+        <div style="position: absolute;border: 2px dashed #FF0000;background-color: transparent;">
+            <p>沿着x轴正方向倾斜，即y轴增加30度角</p>
+        </div>
+
+		<div style="transform: skewY(30deg);transform-origin: left top; position: absolute;top: 300px;">
+        </div>
+        <div style="position: absolute;border: 2px dashed #FF0000;background-color: transparent;top: 300px;">
+            <p>沿着y轴正方向倾斜，即x轴增加30度角</p>
+        </div>
+
+       <div style="transform: skew(30deg,30deg);transform-origin: left top; position: absolute;top: 500px;">
+        </div>
+        <div style="position: absolute;border:2px dashed #FF0000;background-color: transparent;top: 500px;">
+        </div>
+    </body>
+</html>

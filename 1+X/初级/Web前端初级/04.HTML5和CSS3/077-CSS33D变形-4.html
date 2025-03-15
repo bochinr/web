@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS变形</title>
+        <style>
+            div {
+                height: 100px;
+                width: 100px;
+                border: 1px solid;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            RED
+        </div>
+        <div style="transform: rotateX(180deg);">
+            RED
+        </div>
+        <div style="transform: rotateX(180deg);backface-visibility: hidden;">
+            RED
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-创建HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        var $li1 = $("<li>谁知盘中餐</li>");
+        var $li2 = $("<li>粒粒皆辛苦</li>");
+        $("button").click(function(){
+            $("ul").append($li1);
+            $("ul").append($li2);
+        });
+    });
+</script>
+</head>
+<body>
+    <ul>
+        <li>锄禾日当午</li>
+        <li>汗滴禾下土</li>
+    </ul>
+    <button>增加两个HTML元素</button>
+</body>
+</html>

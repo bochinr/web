@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/ html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS伪元素</title>
+    </head>
+    <style type="text/css">
+        p:first-child:first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+
+        p:first-child:first-line {
+            color: #0000ff;
+            font-variant: small-caps;
+        }
+        
+        div:first-line{
+            color: #0000ff;
+            font-variant: small-caps;
+        }
+
+        h1:before {
+            content: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/ superman/img/logo_top_86d58ae1.png);
+        }
+
+        h2:after {
+            content: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/ superman/img/logo_top_86d58ae1.png);
+        }
+    </style>
+    <body>
+        <p>北京欢迎你</p>
+        <p>北京欢迎你</p>
+        <div>
+            北京欢迎你<br/>
+            北京欢迎你
+        </div>
+        <h1>百度</h1>
+        <h2>百度</h2>
+    </body>
+</html>

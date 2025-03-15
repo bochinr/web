@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-事件绑定</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+        $("input").bind("focus",function(){
+            $("span").show();
+        });
+    });
+</script>
+<style>
+span
+{
+display:none;
+}
+</style>
+</head>
+<body>
+<input>
+<p>单击输入框获取焦点。</p>
+<span id="hide">请输入你的电话号码?</span>
+<span>请输入你的电话号码?</span>
+</body>
+</html>

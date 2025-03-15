@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>伪类选择器</title>
+        <style type="text/css">
+            :root {
+                font-size: 30px;
+            }
+
+            li:last-child {
+                color: red;
+            }
+
+            li:nth-child(3) {
+                color: green;
+            }
+
+            li:nth-last-child(3) {
+                color: blue;
+            }
+
+            li:only-child {
+                color: aqua;
+            }
+
+            li:first-of-type {
+                font-size: 40px;
+            }
+
+            li:last-of-type {
+                font-size: 50px;
+            }
+
+            li:nth-of-type(3) {
+                font-size: 60px;
+            }
+
+            li:nth-last-of-type(3) {
+                font-size: 70px;
+            }
+
+            li:only-of-type {
+                font-size: 80px;
+            }
+            :empty{
+                background-color:red;
+                width: 100px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul style="float: left;">
+            <li>春</li>
+            <li>色</li>
+            <li>满</li>
+            <li>园</li>
+            <li>四</li>
+            <li>海</li>
+            <li>花</li>
+            <li>团</li>
+            <li>锦</li>
+            <li>簇</li>
+        </ul>
+        
+        <ul style="float: left; list-style-type: none;">
+            <li>九州同乐</li>
+        </ul>
+        
+        <ul style="float: left; list-style-type: square;">
+            <li>龙</li>
+            <li>行</li>
+            <li>天</li>
+            <li>下</li>
+            <li>五</li>
+            <li>湖</li>
+            <li>唱</li>
+            <li>响</li>
+            <li>吉</li>
+            <li>祥</li>
+        </ul>
+
+        <p style="clear: both;">
+            春联，又称“春贴”“门对”和“对联”。
+        </p>
+        <p></p>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS过渡</title>
+		<style>
+			div {
+				width: 10%;
+				height: 100px;
+				background: blue;
+				text-align: center;
+				font-size: 3rem;
+				color:#fff;
+			}
+
+			div:hover {
+				width: 100%;
+				height: 200px;
+				background-color: #008000;
+			}
+
+			.linear {
+				transition-delay: 10ms;
+				transition-duration: 5s;
+				transition-timing-function: linear;
+				/* -moz-transition-delay: 5ms;
+				-moz-transition-duration: 5s;
+				-moz- transition-timing-function: linear;
+				-webkit-transition-delay: 5ms;
+				-webkit-transition-duration: 5s;
+				-webkit-transition-timing-function: linear;
+				-o-transition-delay: 5ms;
+				-o-transition-duration: 5s;
+				-o-transition- timing-function: linear; */
+			}
+
+			.ease {
+				transition: width 2s;
+				-moz-transition: width 2s;
+				-webkit-transition: width 2s;
+				-o-transition: width 2s;
+			}
+			.ease-in {
+				transition:height 5s ease-in,background-color 10s ease-in;
+				
+			}
+			span{
+	
+				display: inline-block;
+				border:solid 8px green;
+				height: 300px;
+				width: 300px;
+				background-image: url(images/柯基犬.png);
+				background-repeat: no-repeat;
+				border-radius: 50% ;
+			}
+			span:hover{
+				background:url(images/短银猫.png);
+				transform: rotate(1800deg);
+				border:dashed 8px red;
+				
+			}
+			span.magic{
+				transition-delay: 5ms;
+				transition-duration: 3s;
+				transition-property: all;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="linear">1</div>
+		<div class="ease">2</div>
+		<div class="ease-in">3</div>
+		<hr>
+		<span id="magicBox" class="magic"></span>
+	</body>
+</html>

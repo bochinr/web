@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>多背景图片</title>
+	<style type="text/css">
+		html,
+		body {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%
+		}
+
+		body {
+			display: flex;
+			background-color: #333;
+		}
+
+		/* 模仿示范案例，一个人寸照和一个风景图片叠加背景，合成一张照片 */
+		div {
+			margin: auto;
+			min-width: 200px;
+			width: 800px;
+			height: 534px;
+		}
+
+		div.thumbnail {
+			border: 1px solid #ddd;
+			background-color: #fff;
+			border-radius: 4px;
+			padding: 5px;
+			box-sizing: content-box;
+		}
+
+		div.photo {
+			-webkit-background-origin: content-box;
+			background-image: url(./images/sun.png), url(./images/sea.jpg);
+			background-repeat: no-repeat, no-repeat;
+			background-size: 16%, 100%;
+			background-position: 90% 10%, top left;
+			/* background-attachment: fixed; */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="thumbnail photo"></div>
+</body>
+
+</html>

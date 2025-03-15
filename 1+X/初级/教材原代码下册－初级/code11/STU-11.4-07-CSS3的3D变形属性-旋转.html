@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS变形</title>
+		<style type="text/css">
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%
+			}
+
+			body {
+				/* display: flex; */
+				background-color: #333;
+				color:#fff;
+			}
+
+			div {
+				display:flex; 
+				width: 184px;
+				height: 201px;
+				background-image: url(images/3d.jpg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-clip: content-box;
+				background-size: contain;
+				float: left;
+				margin: 1rem;
+				border: solid 8px;
+				border-color: red green yellow blue;
+				text-align: right;
+				font-size: 2rem;
+			}
+			div>img{
+				margin: auto;
+				max-width: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			<img src="./images/3D立方体.png">
+		</div>
+		<div>
+			<!-- 参考老师的示范操作，按教材要求，将下面的img元素沿X轴旋转180度 -->
+			<img src="./images/3D立方体.png">
+		</div>
+		<div>
+			<!-- 参考老师的示范操作，按教材要求，将下面的img元素沿Y轴旋转180度 -->
+			<img src="./images/3D立方体.png">
+		</div>
+        <div>
+			<!-- 参考老师的示范操作，按教材要求，将下面的img元素沿Z轴旋转180度 -->
+			<img src="./images/3D立方体.png">
+		</div>
+        <div>
+			<!-- 参考老师的示范操作，按教材要求，将下面的img元素沿X轴旋转60度、Z轴旋转180度 -->
+			<img src="./images/3D立方体.png">
+		</div>
+        <div>
+			<!-- 参考老师的示范操作，按教材要求，将下面的img元素沿X轴旋转60度、Z轴旋转180度，转转中心为 center bottom -->
+			<img src="./images/3D立方体.png">
+			<img src="./images/3D立方体.png"  style="transform: rotateX(60deg) rotateZ(180deg); transform-origin: center bottom;">
+		</div>
+		
+	</body>
+</html>

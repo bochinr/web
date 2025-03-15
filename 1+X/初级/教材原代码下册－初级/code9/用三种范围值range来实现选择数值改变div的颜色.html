@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用range实现div的背景颜色变化</title>
+	<script>
+		function $(id)
+		{
+			return document.getElementById(id);
+		}
+	
+		function init()
+		{
+			div = $("div");
+			range_change();
+			//获取dom里面的所有input元素
+			var elems = document.getElementsByTagName("input");
+			for (var i = 0; i < elems.length; i++)
+			{
+				var elem = elems[i];
+				//取出type==range的input，分别绑定事件
+				if (elem.type == "range")
+				{
+					elem.addEventListener("change",range_change,false);
+ 
+				}
+			}
+		}
+		function range_change()
+		{
+			var R = $("rangeR").value;
+			var G = $("rangeG").value;
+			var B = $("rangeB").value;
+			div.style.backgroundColor ="rgb("+R+","+G+","+B+")";
+			console.log(R);
+		}
+		
+		window.addEventListener("load",init,false);
+	</script>
+	
+	<style type="text/css">
+		#div{width: 200px;height: 200px;background-color: red;}
+	</style>
+	
+</head>
+
+ 
+<body>
+	<div id="div"></div>
+	R: 0<input type="range" id="rangeR" min="0" max="255" value="0">255<br>
+	G: 0<input type="range" id="rangeG" min="0" max="255" value="0">255<br>
+	B: 0<input type="range" id="rangeB" min="0" max="255" value="0">255<br>
+</body>
+</html>
+

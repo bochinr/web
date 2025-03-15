@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/ html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS伪类</title>
+    </head>
+    <style type="text/css">
+        a:link {
+            font-size: 20px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            font-size: 30px;
+        }
+
+        input:focus {
+            background-color: yellow;
+        }
+
+        li:first-child {
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <a href="http://www.baidu.com">www.baidu.com</a>
+        <br />
+        <a href="http://www.sohu.com">www.sohu.com</a>
+        <br />
+        <a href="http://www.sina.com">www.sina.com</a>
+        <br />
+        <form action="login" method="post">
+            用户名：<input type="text" name="username" id="username" value="" /> <br />
+            密码：<input type="password" name="password" id="password" value="" />
+        </form>
+        <ul>
+            <li>吃</li>
+            <li>喝</li>
+            <li>玩</li>
+            <li>乐</li>
+        </ul>
+        <ul>
+            <li>太平洋</li>
+            <li>大西洋</li>
+            <li>北冰洋</li>
+            <li>印度洋</li>
+        </ul>
+    </body>
+</html>

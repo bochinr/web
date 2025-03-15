@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+var a = 3.1;
+    var b = 3.9;
+    var ceil = Math.ceil(a);     	//向上取整
+    document.write('向上取整:'+ceil+"<br/>");
+    var floor = Math.floor(b);   	//向下取整
+    document.write('向下取整:'+floor+"<br/>");
+    var min = Math.min(a,b);     	//获得a和b中较小的那个数
+    document.write('较小的值是:'+min+"<br/>");
+    var max = Math.max(a,b);     	//获得a和b中较大的那个数
+    document.write('较大的值是:'+max+"<br/>");
+    var c = 3.5;
+    var round = Math.round(c);   	//返回c四舍五入的值
+    document.write('四舍五入:'+round+"<br/>");
+    document.write('3的二次方是:'+Math.pow(3,2)+"<br/>");//返回二次方值
+    document.write('4的开平方是:'+Math.sqrt(4)+"<br/>");	//返回开平方
+    for(i=0;i<5;i++){             		//循环5次，获取5个随机数
+        document.write(Math.random()+"<br/>");			//随机值在0～1
+        //可均衡获取1～10的随机整数
+        document.write((1+Math.floor(Math.random()*10))+"<br/>");
+    }
+
+  </script>
+ </body>
+</html>

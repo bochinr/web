@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-事件解除</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+        $('#btn').bind("click",function(){
+            $('#test').append("<p>我的绑定函数1</p>");
+        }).bind("click",function(){
+            $('#test').append("<p>我的绑定函数2</p>");
+        }).bind("click",function(){
+            $('#test').append("<p>我的绑定函数3</p>");
+        });
+        //事件解绑
+        $('#delAll').click(function(){
+            $('#btn').unbind("click");
+        });
+    });
+</script>
+</head>
+<body>
+<button id="btn">单击我</button>
+<button id="delAll">删除所有事件</button>
+<div id="test"></div>
+</body>
+</html>

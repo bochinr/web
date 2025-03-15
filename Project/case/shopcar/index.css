@@ -1,0 +1,32 @@
+.shopcar {
+	position: relative;
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	margin: 100px;
+	
+	border: 1px solid red;
+	
+}
+.shopcar::before {
+	content: "\e903";
+	font-family: 'icomoon';
+	margin-right: 15%;
+}
+.shopcar::after {
+	content: "\e904";
+	font-family: 'icomoon';
+	margin-left: 15%;
+}
+.count {
+	position: absolute;
+	top: -5px;
+	left: 100px;
+	height: 15px;
+	line-height: 12px;
+	color: #fff;
+	background-color: red;
+	padding: 2px 5px;
+	border-radius: 7px 7px 7px 0;
+}

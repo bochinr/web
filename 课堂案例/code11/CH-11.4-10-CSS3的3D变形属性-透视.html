@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS3的3D变形属性-perspective</title>
+		<style>
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%
+			}
+
+			body {
+				display: flex;
+				background-color: #333;
+				flex-direction: column;
+			}
+			
+			/*设置动画*/
+			@keyframes rotate3dY{   
+			    0%{   
+			        transform:rotateY(0deg) /* translateZ(-300px) */
+			    }   
+			    100%{   
+			        transform:rotateY(360deg) /* translateZ(-300px) */
+			    }   
+			}
+			/*调用动画*/ 
+			/* #view */
+			#photo:hover{   
+				animation:rotate3dY 5s linear infinite;   
+			} 
+			
+			
+			#toolBar{
+				margin: 1rem;
+				background-color: #fff;
+				padding: 1rem;
+				text-align: center;
+				min-height: 3rem;
+			}
+			#view {
+				margin: auto;
+				padding: 0px;
+				display: flex;
+				width: 600px;
+				height: 400px;
+				border: solid #00FF00 1px;
+			    perspective:400px;/*景深 视距 近大远小 必须给父父元素添加景深属性，可以理解为舞台*/
+				/* perspective-origin:100% 0%; */
+				transform-style: preserve-3d;
+
+			}
+			#photo{
+				margin: auto;
+				width: 600px;
+				height: 400px;
+				border:none;
+				transform: rotateY(30deg);
+				transform: translateZ(0px);
+				backface-visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="view">   <!-- style="perspective-origin: 10% 50%;" -->
+			<img id="photo" src="images/sea.png">
+		</div>
+		<div id="toolBar">
+			<form action="" method="get" oninput="txtValue1.value=parseInt(range1.value);txtValue2.value=parseInt(range2.value);txtValue3.value=parseInt(range3.value)">
+				舞台视距：<input id="range1" type="range" name="range1"  value="200" min="0" max="2000" style="width:500px" onchange="ResetValue()"/>
+				<output id="txtValue1" name="txtValue1" for="range1" value="0">200</output> &nbsp;px
+				<br/>
+				沿Y轴旋转：<input id="range2" type="range" name="range2"  value="0" min="0" max="360" style="width:500px" onchange="ResetValue()"/>
+				<output id="txtValue2" name="txtValue2" for="range2" value="0">0</output> &nbsp;deg
+				<br/>
+				Z轴坐标：<input id="range3" type="range" name="range3"  value="0" min="-2000" max="2" style="width:500px" onchange="ResetValue()"/>
+				<output id="txtValue3" name="txtValue3" for="range3" value="0">0</output> &nbsp;px
+			</form>
+			
+		</div>
+		<script type="text/javascript">
+			function ResetValue()
+			{
+			
+					var value1=range1.value+"px";
+					var value2="rotateY("+range2.value+"deg)";
+					var value3="translateZ("+range3.value+"px)";
+					
+					document.getElementById("view").style.perspective=value1;
+					
+					document.getElementById("photo").style.transform=value2+" "+value3;
+
+				console.log(value1,value2,value3)
+			}
+		</script>
+	</body>
+</html>

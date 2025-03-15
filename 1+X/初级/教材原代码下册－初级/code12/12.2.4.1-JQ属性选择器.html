@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>jQuery-属性选择器</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h2>属性选择器</h2>
+    <h3>[属性名]、[属性名='值']、[属性名!='值']</h3>
+        <div class="div" testattr="true" name='p1'>
+            <a>[属性名='值']</a>
+        </div></br>
+        <div class="div" testattr="true" name='p2'>
+            <a>[属性名！='值']</a>
+        </div></br>
+        <div class="div" testattr="true" name='p3'>
+            <a>[属性名！='值']</a>
+        </div></br>
+        <div class="div" testattr="true" >
+            <a>没有name属性</a>
+        </div> 
+</body>
+</html>
+<script type="text/JavaScript">
+    //查找所有div中，属性name=p1的div元素，加红色框
+    $("div[name='p1']").css("border", "5px groove red"); 
+</script>
+<script type="text/JavaScript">
+    //查找所有div中，属性name!=p1的div元素，加蓝色框
+    $("div[name!='p1']").css("border", "5px groove blue"); 
+</script>
+<script type="text/JavaScript">
+    //查找所有div中，有name属性的div元素，背景变为黄色
+    $("div[name]").css("background"，"yellow"); 
+</script> 

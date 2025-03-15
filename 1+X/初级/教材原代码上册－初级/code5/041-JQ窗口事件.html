@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-表单事件</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    x=0;
+    $(document).ready(function(){
+        $("div").scroll(function(){
+            $("span").text(x+=1);
+        });
+    });
+</script>
+</head>
+<body>
+<p>尝试滚动 div 中的滚动条</p>
+<div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+学的不仅是技术，更是梦想！学的不仅是技术，更是梦想！
+学的不仅是技术，更是梦想！学的不仅是技术，更是梦想！</div>
+<p>滚动了 <span>0</span> 次。</p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				background: url(IMG20230813151030.jpg) no-repeat;
+				animation: move2 5s linear infinite;
+				background-size: cover;
+			}
+			div {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 300px;
+				height: 372px;
+				background: url(animation.png) no-repeat;
+				/* 可以调用多个动画,每个动画之间用逗号分割 */
+				animation: walk .3s steps(12) infinite, move 1s forwards;
+			
+			} 
+			/* @keyframes move2 {
+				0 {
+					background-position: 0 0;
+				}
+				100% {
+					background-position: -400px 0;;
+				}
+			} */
+			@keyframes walk {
+				0 {
+					background-position: 0 0;
+				}
+				to {
+					background-position: -3600px 0;
+				}
+			}
+			@keyframes move {
+				0% {
+					left: 0;
+				}
+				to {
+					left: 50%;
+					/* margin需要计算,因此使用transform才是完美的写法 */
+					/* margin-left: -150px;	*/
+					transform: translate(-50%, -50%);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

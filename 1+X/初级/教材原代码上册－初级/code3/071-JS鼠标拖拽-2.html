@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  html,body{    /*必须使用此CSS，否则body上的事件无效*/
+    width:100%;
+    height:100%;
+  }
+  </style>
+  <script>
+    var tank = {};
+    var moveState,attachState;
+    window.onload=function(){
+        tank['87'] = '前进';
+        tank['83'] = '后退';
+        tank['65'] = '左拐';
+        tank['68'] = '右拐';
+        tank['32'] = '开火';
+        moveState = document.getElementById('moveState');
+        attachState = document.getElementById('attachState');
+    }
+    
+    function keydown(e){
+        keycode = e.keyCode;
+        if(keycode!=32&&tank[keycode]){
+            moveState.innerText = tank[keycode];
+        }
+        if(keycode==32){
+            attachState.innerText = tank[keycode];
+        }
+    }
+    function keyup(e){
+        keycode = e.keyCode;
+        if(keycode!=32&&tank[keycode]){
+            moveState.innerText = '静止';
+        }
+        if(keycode==32){
+            attachState.innerText = '';
+        }
+    }
+  </script>
+ </head>
+ <body onkeydown="keydown(event)" onkeyup="keyup(event)">
+ <br/>
+ 坦克运行状态:<span id='moveState'>静止</span><br/>
+ 坦克攻击状态:<span id='attachState'></span>
+ </body>
+</html>

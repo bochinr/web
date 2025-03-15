@@ -1,0 +1,35 @@
+.box {
+	width: 200px;
+	height: 100px;
+	margin: 100px auto;
+	border: 1px solid #e4e4e4;
+	
+}
+.box ul {
+	width: 200px;
+	height: 100px;
+}
+.box ul li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	/* border: 1px solid #e4e4e4; */
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	
+}
+/* .box ul li a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+} */
+.box ul li:nth-of-type(n+5) {
+	border-bottom: 0;
+}
+.box ul li:nth-child(4n) {
+	border-right: 0;
+}

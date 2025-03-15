@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-替换HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("ul li:eq(0)").replaceWith("<li>苹果爱上大鸭梨</li>")
+        }); 
+    });
+</script>
+</head>
+<body>
+    <ul>
+        <li>锄禾日当午</li>
+        <li>汗滴禾下土</li>
+        <li>谁知盘中餐</li>
+        <li>粒粒皆辛苦</li>
+    </ul>
+    <button>替换HTML元素</button>
+</body>
+</html>

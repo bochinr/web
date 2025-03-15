@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>CSS变形</title>
+        <style>
+            .div1 {
+                position: relative;
+                height: 150px;
+                width: 150px;
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid black;
+                background-color: red;
+            }
+
+            .div2 {
+                padding: 40px;
+                position: absolute;
+                border: 1px solid black;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">RED
+            <div class="div2">YELLOW</div>
+        </div>
+
+        <div class="div1" style="float: left;">RED
+            <div class="div2" style="transform: rotateX(50deg);">YELLOW</div>
+        </div>
+
+        <div class="div1" style="float: left;-webkit-perspective:200;">RED
+            <div class="div2" style="transform: rotateX(50deg);">YELLOW</div>
+        </div>
+        
+        <div class="div1" style="float: left;-webkit-perspective:200;-webkit- perspective-origin: left top;">RED
+            <div class="div2" style="transform: rotateX(50deg);">YELLOW</div>
+        </div>
+        <br style="clear: both;" />
+        
+        <div class="div1" style="float: left;transform: rotateY(50deg); transform-style: preserve-3d;">RED
+            <div class="div2" style="transform: rotateX(50deg);">YELLOW</div>
+        </div>
+        
+        <div class="div1" style="float: left;;transform: rotateY(50deg);  -webkit -perspective: 200;">RED
+            <div class="div2" style="transform: rotateX(50deg);">YELLOW</div>
+        </div>
+            <div class="div1" style="float: left;;transform: rotateY(50deg); transform-style: preserve-3d;-webkit-perspective: 200;">RED
+            <div class="div2" style="transform: rotateX (50deg);">YELLOW </div>
+        </div>
+
+    </body>
+</html>

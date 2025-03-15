@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-属性选择器</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h2>属性选择器</h2>
+    <h3>[属性名^='值']、[属性名$='值']、[属性名*='值']</h3>
+
+        <div class="div" testattr="true" name='enpenc'>
+            <a>[属性名='值']</a>
+        </div></br>
+        <div class="div" testattr="true" name='show.html'>
+            <a>[属性名！='值']</a>
+        </div></br>
+        <div class="div" testattr="true" name='hideo'>
+            <a>[属性名！='值']</a>
+        </div>
+</body>
+</html>
+<script type="text/JavaScript">
+    //匹配name属性值以en开头的div元素，加红色框
+    $("div[name^='en']").css("border", "5px groove red"); 
+</script>
+<script type="text/JavaScript">
+    //匹配name属性值以html结尾的div元素，加蓝色框
+    $("div[name$='html']").css("border", "5px groove blue"); 
+    //匹配name属性值包含“o”的div元素，背景变为黄色
+    $("div[name*='o']").css("background"，"yellow"); 
+</script>

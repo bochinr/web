@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+//定义一个字符串
+var str = '2019-2-123';
+//数字{4}个开头-数字{1个或者2个}-数字{1个或者2个}结尾
+var reg = /^[\d]{4}-[\d]{1,2}-[\d]{1,2}$/;
+//改为用正则对象的test校验，符合返回true，不符合返回false
+document.write(reg.test(str));
+
+  </script>
+ </body>
+</html>

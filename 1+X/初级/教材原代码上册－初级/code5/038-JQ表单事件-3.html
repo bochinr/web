@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-表单事件</title>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+        $("input").focus(function(){
+            $(this).css("background-color","#cccccc");
+        });
+    });
+</script>
+</head>
+<body>
+Name: <input type="text" name="fullname"><br>
+E-mail: <input type="text" name="email">
+</body>
+</html>

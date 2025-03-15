@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5的input元素的color类型</title>
+		
+    </head>
+    <body>
+        <form action="" method="get">
+		<!-- <form action="" method="get" onsubmit="alert(colorpicker.value);return(false);"> -->	
+            <input type="color" name="colorpicker" id="colorpicker" value="#000" onchange="SetBackColor(this.value)" /><br />
+            <input type="submit" id="" name=""  />
+        </form>
+		
+		<script type="text/javascript">
+			function SetBackColor(colorValue)
+			{
+				document.bgColor=colorValue;  //document.fgColor 文本颜色
+			}
+		</script>
+    </body>
+</html>

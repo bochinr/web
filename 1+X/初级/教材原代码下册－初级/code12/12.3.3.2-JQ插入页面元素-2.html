@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery-插入HTML元素</title>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("ol").prepend("<li>追加目录 4</li>");
+        });
+    });
+</script>
+</head>
+<body>
+<ol>
+<li>目录 1</li>
+<li>目录 2</li>
+<li>目录 3</li>
+</ol>
+<button id="btn1">添加目录</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>标签样式操作-toggleClass()</title>
+  <style type="text/css">
+    .add{
+        background:yellow;
+        color:blue;
+    }
+  </style>
+  <script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+    $(function(){
+        $("#btn3").bind("click",function(){
+            $("p").toggleClass("add");
+        });
+    })
+</script>
+</head>
+<body>
+    <button id="btn3">样式切换</button>
+    <p  class="test">你喜欢的运动是：</p>
+    <ul>
+        <li>足球</li>
+        <li>羽毛球</li>
+    </ul>
+</body>
+</html>

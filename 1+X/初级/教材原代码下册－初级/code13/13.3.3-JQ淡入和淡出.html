@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>fadeOut()、fadeIn()、fadeToggle()</title>
+  <style type="text/css">
+  * {
+    margin: 0px;
+  }
+  .div1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 10px;
+    background: green;
+  }
+</style>
+<script type="text/JavaScript" src="./js/jquery-3.4.1.js"></script>
+<script type="text/JavaScript">
+   $(function () {
+    //1.单击 btn1，实现慢慢淡出
+    $('#btn1').click(function () {
+       $('.div1').fadeOut()  
+    })
+    //2.单击 btn3，实现慢慢淡入
+    $('#btn2').click(function () {
+      $('.div1').fadeIn()
+    })
+    //3.单击 btn3，实现淡出/淡入切换
+    $('#btn3').click(function () {
+      $('.div1').fadeToggle(function () {
+        alert('动画结束了')
+      })
+    })
+  })
+</script>
+<body>
+<button id="btn1">淡出</button>
+<button id="btn2">淡入</button>
+<button id="btn3">淡出/淡入切换</button>
+<div class="div1">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  html,body{
+    width:100%;
+    height:100%;
+  }
+  </style>
+  <script>
+    function scrollChange(){
+        srpos = document.getElementById('srpos');
+        srpos.innerText = '滚动条滚动到:'+document.documentElement. scrollTop;
+        //使srpos不随滚动条滑动，始终固定在同一位置
+        srpos.style.top = document.documentElement.scrollTop+"px";
+    }
+  </script>
+ </head>
+ <body onscroll="scrollChange()">
+ <div style='height:300%;'>         <!--让div高度为300%,产生滚动条-->
+ <br/>
+    <font id='srpos' style='position: relative;top:0px'>滚动条滚动到0px</font>
+ </div>
+ </body>
+</html>

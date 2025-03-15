@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+ </head>
+ <body>
+  <script>
+function add(a,b){
+        return a+b;
+    }
+    function times(a,b){
+        return a*b;
+    }
+    function operation(a,b,fun){
+        return fun(a,b);
+    }
+    var rs1 = operation(3,5,add);   	//传入add
+    document.write(rs1);
+    document.write('<br/>');
+    var rs2 = operation(3,5,times);	//传入times
+    document.write(rs2);
+
+  </script>
+ </body>
+</html>

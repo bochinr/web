@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				flex: 0 auto 0;
+			}
+
+			header,
+			footer {
+				
+				width: 100%;
+			}
+			header {
+				height: 80px;
+				line-height: 80px;
+				background-color: #00aaff;
+				flex: 0 0 auto;
+			}
+			footer {
+				background-color: #e8e8e8;
+				flex: 0 0 auto;
+				height: 60px;
+				line-height: 60px;
+				
+			}
+			section {
+				background-color: #ccc;
+				flex: auto;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				border: solid 1px green;
+			}
+
+			section>select {
+				flex: auto;
+				display: flex;
+				padding: 0.5rem;
+			}
+			section>select>option{
+				font-size: 1rem;
+				cursor: pointer;
+				font-family: "宋体";
+				line-height: 1.5rem;
+				padding: 4px;
+			}
+			section>select>option:hover{
+				background-color: #990000;
+				color:#fff;
+				cursor: pointer;
+				
+			}
+			h2{
+				padding-left:0.2rem;
+				color:#fff;
+			}
+			h4{
+				padding-left: 1rem;
+				color:#777;
+			}
+			small{
+				font-size: 67%;
+				padding-left: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h2>《网页设计与制作》微视频<small>第1-3章</small></h2>
+		</header>
+		<section>
+
+			<select onchange="PlayVideo(this.value)" size="20">
+				<option value='https://2d.hep.com.cn/48749/1'>微课1-1网页与网站的相关概念文档</option>
+				<option value='https://2d.hep.com.cn/48749/2'>微课1-2网页设计相关的程序设计语言文档</option>
+				<option value='https://2d.hep.com.cn/48749/3'>微课1-3网页设计的流程文档</option>
+				<option value='https://2d.hep.com.cn/48749/4'>微课1-4HTML5的发展历史文档</option>
+				<option value='https://2d.hep.com.cn/48749/5'>微课1-5使用HTML5的五大原因文档</option>
+				<option value='https://2d.hep.com.cn/48749/6'>微课1-6浏览器以及浏览器内核文档</option>
+				<option value='https://2d.hep.com.cn/48749/7'>微课1-7HTML5文件的编写工具文档</option>
+				<option value='https://2d.hep.com.cn/48749/8'>微课1-8HTML5文档的基本格式文档</option>
+				<option value='https://2d.hep.com.cn/48749/9'>微课1-9使用HTML5编写简单的Web页面文档</option>
+				<option value='https://2d.hep.com.cn/48749/10'>微课1-10体验HTML5的页面特征文档</option>
+				<option value='https://2d.hep.com.cn/48749/11'>微课1-11任务实施：网站主页的策划与设计文档</option>
+				<option value='https://2d.hep.com.cn/48749/12'>微课1-12认识DreamweaverCC文档</option>
+				<option value='https://2d.hep.com.cn/48749/13'>微课1-13HBuilder的快速开发技巧文档</option>
+				<option value='https://2d.hep.com.cn/48749/14'>微课2-1HTML5基本语法文档</option>
+				<option value='https://2d.hep.com.cn/48749/15'>微课2-2HTML5标签及属性文档</option>
+				<option value='https://2d.hep.com.cn/48749/16'>微课2-3HTML5文档头部head标签文档</option>
+				<option value='https://2d.hep.com.cn/48749/17'>微课2-4标题与段落标签文档</option>
+				<option value='https://2d.hep.com.cn/48749/18'>微课2-5文本的格式化标签文档</option>
+				<option value='https://2d.hep.com.cn/48749/19'>微课2-6特殊字符标签文档</option>
+				<option value='https://2d.hep.com.cn/48749/20'>微课2-7图像标签img文档</option>
+				<option value='https://2d.hep.com.cn/48749/21'>微课2-8超级链接标签a</option>
+				<option value='https://2d.hep.com.cn/48749/22'>微课2-9锚点链接</option>
+				<option value='https://2d.hep.com.cn/48749/23'>微课2-10影像地图</option>
+				<option value='https://2d.hep.com.cn/48749/24'>微课2-11表格标签</option>
+				<option value='https://2d.hep.com.cn/48749/25'>微课2-12列表标签</option>
+				<option value='https://2d.hep.com.cn/48749/26'>微课2-13综合实例：书法家庄辉个人介绍</option>
+				<option value='https://2d.hep.com.cn/48749/27'>微课2-14任务实施：运用HTML编写主页的基本结构</option>
+				<option value='https://2d.hep.com.cn/48749/28'>微课2-15ruby标签</option>
+				<option value='https://2d.hep.com.cn/48749/29'>微课2-16mark标签</option>
+				<option value='https://2d.hep.com.cn/48749/30'>微课2-17cite标签</option>
+				<option value='https://2d.hep.com.cn/48749/31'>微课3-1认知结构性标签</option>
+				<option value='https://2d.hep.com.cn/48749/32'>微课3-2section标签</option>
+				<option value='https://2d.hep.com.cn/48749/33'>微课3-3article标签</option>
+				<option value='https://2d.hep.com.cn/48749/34'>微课3-4nav标签</option>
+				<option value='https://2d.hep.com.cn/48749/35'>微课3-5aside标签</option>
+				<option value='https://2d.hep.com.cn/48749/36'>微课3-6header标签</option>
+				<option value='https://2d.hep.com.cn/48749/37'>微课3-7footer标签</option>
+				<option value='https://2d.hep.com.cn/48749/38'>微课3-8figure 标签和figcaption标签</option>
+				<option value='https://2d.hep.com.cn/48749/39'>微课3-9hgroup标签</option>
+				<option value='https://2d.hep.com.cn/48749/40'>微课3-10dialog标签</option>
+				<option value='https://2d.hep.com.cn/48749/41'>微课3-11details标签和summary标签</option>
+				<option value='https://2d.hep.com.cn/48749/42'>微课3-12menu标签与command标签</option>
+				<option value='https://2d.hep.com.cn/48749/43'>微课3-13progress标签</option>
+				<option value='https://2d.hep.com.cn/48749/44'>微课3-14meter标签</option>
+				<option value='https://2d.hep.com.cn/48749/45'>微课3-15time标签</option>
+				<option value='https://2d.hep.com.cn/48749/46'>微课3-16video标签和audio标签</option>
+				<option value='https://2d.hep.com.cn/48749/47'>微课3-17contenteditable属性</option>
+				<option value='https://2d.hep.com.cn/48749/48'>微课3-18hidden属性</option>
+				<option value='https://2d.hep.com.cn/48749/49'>微课3-19spellcheck属性</option>
+				<option value='https://2d.hep.com.cn/48749/50'>微课3-20draggable属性</option>
+				<option value='https://2d.hep.com.cn/48749/51'>微课3-21综合实例：个人博客页面结构设计</option>
+				<option value='https://2d.hep.com.cn/48749/52'>微课3-22任务实施：使用HTML5新标签优化网页</option>
+				<option value='https://2d.hep.com.cn/48749/53'>微课3-23div标签和span标签</option>
+				<option value='https://2d.hep.com.cn/48749/54'>微课3-24div、section和article的区别和使用</option>
+				
+
+			</select>
+
+		</section>
+		<footer>
+			<h4>https://www.aqvtc.edu.cn. WQZ</h4>
+		</footer>
+		<script type="text/javascript">
+			if (top.location != self.location)
+				top.location = self.location;
+			var vbox = document.getElementById("VBOX")
+			//document.domain = 'hep'
+			function PlayVideo(value) {
+				if (value == "") return;
+				var sub = window.open(value, "vb", "fullscreen=yes");
+			}
+		</script>
+	</body>
+</html>
